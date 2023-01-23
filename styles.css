@@ -1,0 +1,164 @@
+body {
+    background-color: #131329;
+    /* background-image: linear-gradient(to bottom right, #131329, #383875); */
+    font-family: 'Open Sans', sans-serif;
+    margin: auto;
+    max-width: 1200px;
+}
+
+header {
+    width: 1100px;
+    height: 250px;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #E5E5E5;
+    line-height: 2em;
+    font-size: 20px;
+    font-weight: 600;
+    transition: font-size 0.5s ease;
+    /* text-align: left; */
+    /* margin: 0;
+    padding: 0; */
+} 
+
+a:hover {
+    color: #131329;
+    font-size: 22px;
+}
+
+footer a:hover {
+    color: #B8B8D3;
+}
+
+h1, h2, h3 {
+    color: #E5E5E5;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 0;
+}
+
+header h2 {
+    font-weight: 600;
+    font-size: 40px;
+    margin-bottom: 0px;
+}
+
+#banner{
+    /* display: inline-flex; */
+}
+
+#title {
+    display: inline-flex;
+}
+
+/* #banner .static-title {
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 0;
+    color: #E5E5E5;
+} */
+
+#title .dynamic-title {
+    margin: 12px 0 16px 15px;
+    height: 95px;
+    overflow: hidden;
+    width: 390px;
+}
+
+.dynamic-title li{
+    list-style: none;
+    font-weight: 700;
+    font-size: 96px;
+    height:110px;
+    color:#B8B8D3;
+    position: relative;
+    top: 0;
+    animation: slide 9s steps(6) infinite;
+}
+
+@keyframes slide {
+    100%{
+       top: -660px;
+    }
+}
+
+
+.dynamic-title li span{
+    position: relative;
+    background: -webkit-linear-gradient(0deg, #DD8D8D, #96C0FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dynamic-title li span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 110px;
+    width: 500px;
+    background: #131329;
+    border-left: 2px solid #B8B8D3;
+    animation: typing 1.5s steps(8) infinite alternate;
+}
+
+@keyframes typing {
+    100%{
+       left: 115%; 
+    }
+}
+
+.bar {
+    animation: blinker 1s linear infinite;
+}
+  
+  @keyframes blinker {
+    50% {
+      opacity: 0;
+    }
+  }
+
+.column {
+    background-color: #B8B8D3;
+    display: block;
+    width: 273px;
+    height: 386px;
+    border-radius: 15px;
+    padding: 22px 30px;
+
+}
+
+.column ul {
+    padding-left: 0;
+}
+
+main {
+    display: flex;
+    gap:60px;
+}
+
+.column h2 {
+    color: #131329;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+}
+
+footer p {
+    color:#B8B8D3;
+    /* line-height: 2em;
+    font-size: 20px;
+    font-weight: 600; */
+}
