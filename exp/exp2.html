@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiment 2</title>
+    <style>
+        #rectangle{
+        width: 500px;
+        height: 500px;
+        background: gray;
+        }
+    </style>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+    <div id="rectangle"></div>
+
+    <script>
+        var favColor = prompt("what is your favorite primary or secondary color?", "");
+        var color = ["blue", "yellow", "red", "green", "orange", "purple"];
+
+        function randomColor (min, max) {
+            return Math.floor ((max-min+1)* Math.random()) + min;
+        }
+
+        document.querySelector(`#rectangle`).style.background = (color[randomColor(0,5)]);
+        function square(fill) {
+            var changeColor
+            if (fill == null || fill == "") {
+                alert("you didn't list a primary or secondary color.")
+            }
+            else {
+                changeColor = document.querySelector(`#rectangle`)
+
+                changeColor.style.background = fill;
+            }
+            return changeColor
+        }
+        square (favColor);
+    </script>
+    <!-- in this experiment, if the user does not submit a valid primary or secondary color from the array list, a random color from the array will display on the box. However, if the user inputs a valid primary or secondary color, the box will display the color the user has inputted. If the user hit cancel or does not input anything, an alert message will appear telling the user has not typed a primary or secondary color -->
+</body>
+</html>
