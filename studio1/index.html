@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Itim&family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script> 
+    <title>MBTI Mad Libs</title>
+</head>
+<body>
+    <header>
+        <img src="images/girl.png" alt="girl" width="250" height="250">
+        <img src="images/guy.png" alt="boy" width="250" height="250">
+        <h2>learn more about yourself!</h2>
+        <h1>Personality Test</h1>
+
+    </header>
+    <main>
+        <form method="POST" action="processor.php">
+            <label for="name">name *</label>
+            <input type="text" name="name" id="name" required>
+
+            <label for="mbti">mbti *</label>
+            <select id="mbti" required>
+                <option value="">---</option>
+                <option value="intj">intj</option>
+                <option value="intp">intp</option>
+                <option value="entj">entj</option>
+                <option value="entp">entp</option>
+                <option value="infj">infj</option>
+                <option value="infp">infp</option>
+                <option value="enjf">enjf</option>
+                <option value="enfp">enfp</option>
+                <option value="istj">istj</option>
+                <option value="isfj">isfj</option>
+                <option value="estj">estj</option>
+                <option value="esfj">esfj</option>
+                <option value="istp">istp</option>
+                <option value="isfp">isfp</option>
+                <option value="estp">estp</option>
+                <option value="esfp">esfp</option>
+            </select>
+            <small>find out your mbti <a href="https://www.16personalities.com/">here</a></small>
+
+            <label for="hobby">hobby *</label>
+            <input type="text" name="hobby" id="hobby" required>
+
+            <label for="adj">adjective *</label>
+            <input type="text" name="adj" id="adj" required>
+
+            <label for="freq">frequency *</label>
+            <select id="freq" required>
+                <option value="">   </option>
+                <option value="never">never</option>
+                <option value="occasionally">occasionally</option>
+                <option value="sometimes">sometimes</option>
+                <option value="often">often</option>
+                <option value="always">always</option>
+            </select>
+
+            <label for="str">strength *</label>
+            <input type="text" name="str" id="str" required>
+
+            <input type="submit" name="submit" id="submit" value="submit">
+
+        </form>
+    </main> 
+</body>
+</html>
