@@ -18,14 +18,14 @@
         <img src="images/guy.png" alt="boy" width="250" height="250">
         <h2>learn more about yourself!</h2>
         <h1>Personality Test</h1>
-
     </header>
     <main>
-        <form method="POST" action="processor.php">
-            <label for="name">name *</label>
+        <section>
+        <form>
+            <label for="name">name <span>*</span></label>
             <input type="text" name="name" id="name" required>
 
-            <label for="mbti">mbti *</label>
+            <label for="mbti">mbti <span>*</span></label>
             <select id="mbti" required>
                 <option value="">---</option>
                 <option value="intj">intj</option>
@@ -47,15 +47,15 @@
             </select>
             <small>find out your mbti <a href="https://www.16personalities.com/">here</a></small>
 
-            <label for="hobby">hobby *</label>
+            <label for="hobby">hobby <span>*</span></label>
             <input type="text" name="hobby" id="hobby" required>
 
-            <label for="adj">adjective *</label>
+            <label for="adj">adjective <span>*</span></label>
             <input type="text" name="adj" id="adj" required>
 
-            <label for="freq">frequency *</label>
+            <label for="freq">frequency <span>*</span></label>
             <select id="freq" required>
-                <option value="">   </option>
+                <option value="">---</option>
                 <option value="never">never</option>
                 <option value="occasionally">occasionally</option>
                 <option value="sometimes">sometimes</option>
@@ -63,12 +63,19 @@
                 <option value="always">always</option>
             </select>
 
-            <label for="str">strength *</label>
+            <label for="str">strength <span>*</span></label>
             <input type="text" name="str" id="str" required>
 
             <input type="submit" name="submit" id="submit" value="submit">
-
         </form>
+    </section>
     </main> 
+    <section class="hidden">
+        <h2>personality for <span>name</span></h2>
+        <img src="images/girl.png" alt="girl" width="250" height="250">
+        <img src="images/guy.png" alt="boy" width="250" height="250">
+        <h1><span>MBTI</span></h1>
+        <article id="results">For <span>MBTI</span> personality type, they seek fulfillment through <span>activity/hobby</span>. While they have <span>adjective</span> goals and ambitions, they’re <span>never/occasionally/sometimes/often/always (frequency)</span> satisfied until they’ve done what’ they know to be right. People with this personality type commit to making the world a better place. They often use their strengths to uplift others and spread compassion. However, they may focus so intently on their ideals that they don’t take adequate care of themselves</article>
+    </section>
 </body>
 </html>
