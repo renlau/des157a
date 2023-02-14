@@ -13,15 +13,15 @@
     <title>MBTI Mad Libs</title>
 </head>
 <body>
-    <header>
-        <img src="images/girl.png" alt="girl" width="250" height="250">
-        <img src="images/guy.png" alt="boy" width="250" height="250">
-        <h2>learn more about yourself!</h2>
-        <h1>Personality Test</h1>
-    </header>
     <main>
-        <section>
-        <form>
+        <section id="ogpage">
+        <div>
+            <img src="images/girl.png" alt="girl" width="250" height="250">
+            <img src="images/guy.png" alt="boy" width="250" height="250">
+            <h2>learn more about yourself!</h2>
+            <h1>Personality Test</h1>
+        </div>
+        <form id = "myform">
             <label for="name">name <span>*</span></label>
             <input type="text" name="name" id="name" required>
 
@@ -68,14 +68,19 @@
 
             <input type="submit" name="submit" id="submit" value="submit">
         </form>
-    </section>
+        </section>
+        <section id="newpage">
+            <h2 id="title"></h2>
+            <img src="images/girl.png" alt="girl" width="250" height="250">
+            <img src="images/guy.png" alt="boy" width="250" height="250">
+            <h1 id="mbtiresults"></h1>
+            <article id="results"></article>
+            <a id="playagain" href="https://renlau.github.io/des157a/studio1/index.html">play again</a>
+        </section>
     </main> 
-    <section class="hidden">
-        <h2>personality for <span>name</span></h2>
-        <img src="images/girl.png" alt="girl" width="250" height="250">
-        <img src="images/guy.png" alt="boy" width="250" height="250">
-        <h1><span>MBTI</span></h1>
-        <article id="results">For <span>MBTI</span> personality type, they seek fulfillment through <span>activity/hobby</span>. While they have <span>adjective</span> goals and ambitions, they’re <span>never/occasionally/sometimes/often/always (frequency)</span> satisfied until they’ve done what’ they know to be right. People with this personality type commit to making the world a better place. They often use their strengths to uplift others and spread compassion. However, they may focus so intently on their ideals that they don’t take adequate care of themselves</article>
-    </section>
 </body>
 </html>
+
+
+
+<!-- For <span>MBTI</span> personality type, they seek fulfillment through <span>activity/hobby</span>. While they have <span>adjective</span> goals and ambitions, they’re <span>never/occasionally/sometimes/often/always (frequency)</span> satisfied until they’ve done what’ they know to be right. People with this personality type commit to making the world a better place. They often use their strengths to uplift others and spread compassion. However, they may focus so intently on their ideals that they don’t take adequate care of themselves -->
