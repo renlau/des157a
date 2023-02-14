@@ -97,7 +97,9 @@ small {
 
 #playagain {
     padding: 10px 20px 10px 20px;
+    text-decoration: none;
 }
+
 
 header {
     align-items: center;
