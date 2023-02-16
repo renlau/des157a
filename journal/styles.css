@@ -10,7 +10,7 @@ section{
 
 .static {
     width: 310px;
-    margin-left: 97px;
+    /* margin-left: 97px; */
 }
 
 h1 {
@@ -45,10 +45,13 @@ li a:hover {
 }
 
 article {
-    width: 600px;
+    width: 790px;
     padding: 50px 0px 50px 0px;
 }
 
+article section {
+    gap: 25px;
+}
 h3 {
     font-family: 'Open Sans', sans-serif;
     color: #9F9F9F;
@@ -68,7 +71,7 @@ h3 {
     color: #DD8D8D;
 }
 
-p {
+p, figcaption {
     font-family: 'Open Sans', sans-serif;
     color: #575757;
     line-height: 1.5em;
@@ -81,6 +84,12 @@ p a {
 
 p a:hover {
     color: #DD8D8D;
+}
+
+img {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
 }
 
 
