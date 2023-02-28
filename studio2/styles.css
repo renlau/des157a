@@ -1,0 +1,203 @@
+/* left: +351.5px */
+/* general styling: layout and text */
+html, body{
+    height: 100%;
+    margin: 0;
+    
+}
+
+h1, h2, h3 , h4, p {
+    font-family: 'Open Sans', sans-serif;
+    color: #E5E5E5;
+}
+
+h1, h3 {
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+h2, h4 {
+    font-weight: 600;
+    font-style: italic;
+}
+
+h1{
+    font-size: 6em;
+}
+
+
+h2{
+    font-size: 2.5em;
+}
+
+h3 {
+    font-size: 3em;
+}
+
+h4 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+p{
+    font-size: 1em;
+}
+
+section {
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: none;
+    position: relative;
+}
+
+img {
+    position: absolute;
+    scale: 1.1;
+}
+
+.colorimg {
+    opacity: 0;
+    transition: 0.5s ease;
+}
+
+.colorimg:hover {
+    opacity: 1;
+}
+
+.blurb {
+    position: absolute;
+    width: 434px;
+}
+
+/* title page */
+
+#title {
+    background-image: url("images/titleBG.png");
+}
+
+#titleblurb {
+    padding-top: 250px;
+    padding-left: 478px;
+}
+
+#bwkeshi, #dkeshi {
+    top: -192px;
+    left: 1248px;
+}
+
+
+/* keshi section */
+
+#keshi {
+    background-image: url("images/keshi/keshibg.png");
+}
+
+#keshiblurb {
+    top: 347px;
+    left: 478px;
+}
+
+#bwkeshi, #dkeshi {
+    top: -192px;
+    left: 1248px;
+}
+
+#bwoutfit, #doutfit {
+    top: 122px;
+    left: 944px;
+}
+
+#bwsallyni, #dsallyni {
+    top: 304px;
+    left: 1248px;
+}
+
+/* seventeen section */
+
+#seventeen {
+    background-image: url("images/svt/svtbg.png");
+}
+
+#svtblurb {
+    top: 268px;
+    left: 1060px;
+}
+
+#seventeen #bwgroup, #seventeen #dgroup {
+    top: -192px;
+    left: 944px;
+}
+
+#bwme, #dme {
+    top: 33px;
+    left: 653px;
+}
+
+#bwphotobomb, #dphotobomb {
+    top: 465px;
+    left: 477px;
+}
+
+#bwwwdoll, #dwwdoll {
+    top: 465px;
+    left: 770px;
+}
+
+/* porter section */
+#porter {
+    background-image: url("images/porter/porterbg.png");
+}
+
+#porterblurb {
+    top: 215px;
+    left: 478px;
+}
+
+#bwheart, #dheart {
+    top: -192px;
+    left: 1237px;
+}
+
+#bwoutfit, #doutfit {
+    top: 159px;
+    left: 946px;
+}
+
+#bwsign, #dsign {
+    top: 365px;
+    left: 1237px;
+}
+
+/* dabin section */
+#dabin {
+    background-image: url("images/dabin/dabinbg.png");
+}
+
+#dabinblurb {
+    top: 359px;
+    left: 1049px;
+}
+
+#dabin #bwgroup, #dabin #dgroup {
+    top: -192px;
+    left: 641px;
+}
+
+#bwhstrio, #dhstrio {
+    top: -192px;
+    left: 946px;
+}
+
+#bwsallynme, #dsallynme {
+    top: 343px;
+    left: 477px;
+}
+
+#bwtrio, #dtrio {
+    top: 343px;
+    left: 770px;
+}
+
