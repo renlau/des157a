@@ -3,9 +3,17 @@ body {
     margin: auto;
 }
 
-section{
+main{
     display:flex;
     gap: 100px;
+}
+
+#content section {
+    display: flex;
+}
+
+figure {
+    width: 150px;
 }
 
 .static {
