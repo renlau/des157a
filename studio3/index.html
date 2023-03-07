@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> VALORANT: Game of PIG</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <section id="rules">
+        <h1>How to Play</h1>
+        <p>There are two players. The player whose turn it is rolls the dice. The total of the roll does damage to the
+            other player's health, unless either die comes up as a "one". If this happens, this player's turn is over,
+            and it is the other player’s turn. After each roll, the current player can either roll again, (assuming a
+            "one" was not rolled) or if the current player feels that luck is running thin, they can pass to the other
+            player. The first player to get the other player to 0 health wins. Oh, and if you roll two "ones" (snake
+            eyes), your current score gets zeroed out. So don’t do that.</p>
+        <button id="startgame" class="button1">Start the Game</button>
+    </section>
+    <div id="gamecontrol">
+        <img src="images/topbar.png" alt="top bar" width="1200">
+        <div id="display">
+            <section id="player1" class="disabled">
+                <h1>PLAYER 1</h1>
+                <img src="images/jett.png" alt="jett" width="300">
+                <div id="score1"></div>
+                <!-- <div>
+                <button type="button">ROLL</button>
+                <button type="button">PASS</button>
+            </div>
+            <div id="score1"></div> -->
+            </section>
+            <section id="player2" class="disabled">
+                <h1>PLAYER 2</h1>
+                <img src="images/jett.png" alt="jett" width="300">
+                <div id="score2"></div>
+                <!-- <h1>100</h1>
+            <img src="images/p2healthbar.png">
+            <div>
+                <button type="button">ROLL</button>
+                <button type="button">PASS</button>
+            </div> -->
+            </section>
+        </div>
+    </div>
+    <div id="score">
+        <img src="images/p1healthbar.png">
+    </div>
+    <div id="game">
+    </div>
+    <div id="actions"></div>
+
+    <script>
+
+
+    </script>
+
+</body>
+
+</html>
+
+
+<!-- <img src="images/topbar.png" alt="top bar">
+        <section id= "player1">
+            <h1>JETT</h1>
+            <img src="images/jett.png" alt="jett">
+            <h1>100</h1>
+            <img src="images/p1healthbar.png">
+            <div>
+                <button type="button">ROLL</button>
+                <button type="button">PASS</button>
+            </div>
+        </section>
+        <section id= "player2">
+            <h1>JETT</h1>
+            <img src="images/jett.png" alt="jett">
+            <h1>100</h1>
+            <img src="images/p2healthbar.png">
+            <div>
+                <button type="button">ROLL</button>
+                <button type="button">PASS</button>
+            </div>
+        </section> -->

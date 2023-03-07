@@ -1,0 +1,95 @@
+body {
+    background-image: url("images/background.png");
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+#player1, #player2 {
+    width: 600px;
+}
+
+h1 {
+    font-size: 4em;
+    color: #EAEEB3;
+    font-weight: 700;
+}
+
+#rules {
+    text-align: center;
+}
+
+p, .button1, .button2, .button3 {
+    font-size: 2em;
+    color: #E0E5E5;
+}
+
+p {
+    line-height: 1.5em;
+    text-align: left;
+}
+
+/* button styles */
+
+.button1, .button2, .button3 {
+    padding: 0.5em 1em;
+    transition-duration: 0.2s;
+}
+
+.button2, .button3 {
+    width: 200px;
+}
+
+.button1 {
+    background-color: rgb(127, 196, 192, 0.75);
+    /* background-color: #7FC4C0; */
+    border:0.5px solid #E0E5E5;
+}
+
+.button1:hover {
+    background-color: rgb(127, 196, 192);
+}
+
+.button2 {
+    background-color: rgb(224, 229, 229, 0.5);
+    border: none;
+}
+
+.button2:hover {
+    background-color: rgb(224, 229, 229, 0.75);
+
+}
+
+.button3 {
+    border:0.5px solid #E0E5E5;
+    background-color: transparent;
+}
+
+.button3:hover {
+    background-color: rgb(224, 229, 229, 0.25);;
+}
+
+
+/* .disabled {
+    opacity: 0.5;
+} */
+
+#rules {
+    text-align: center;
+}
+
+#gamecontrol, #score {
+    display: none;
+}
+
+#display {
+    display: flex;
+}
+
