@@ -16,7 +16,6 @@ h1 {
     font-size: 4em;
     color: #EAEEB3;
     font-weight: 700;
-    /* padding-top: 0; */
 }
 
 #rules {
@@ -46,7 +45,6 @@ p {
 
 .button1 {
     background-color: rgb(127, 196, 192, 0.75);
-    /* background-color: #7FC4C0; */
     border:0.5px solid #E0E5E5;
 }
 
@@ -73,13 +71,16 @@ p {
     background-color: rgb(224, 229, 229, 0.25);;
 }
 
-#quit {
+#quit, #help {
     font-size: 1.25em;
     width: 100px;
+    margin: 10px;
 }
 
 .actionButtons {
     display: flex;
+    gap: 50px;
+    /* justify-content: space-between; */
 }
 
 .disabled {
@@ -97,6 +98,7 @@ p {
 }
 
 #topbar {
+    padding-top: 20px;
     position: absolute;
     flex-direction: column;
     align-items: center;
@@ -138,4 +140,9 @@ p {
     display: none;
     flex-direction: column;
     align-items: center;
+}
+
+#gameInfo {
+    width: 300px;
+    /* text-align: center; */
 }

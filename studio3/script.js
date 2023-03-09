@@ -15,6 +15,7 @@
     const score0 = document.getElementById('score0');
     const score1 = document.getElementById('score1');
     const rules = document.getElementById('rules');
+    const gun = new Audio('audio/voicy-valorant-weapon-phantom.mp3')
 
     const gameData = {
         players: ['player 1', 'player 2'],
@@ -37,12 +38,19 @@
         document.getElementById('quit').addEventListener('click', function () {
             // reloads the page
             location.reload();
+            rules.style.display = "block";
+        });
+        document.getElementById('help').addEventListener('click', function () {
+            // reloads the page
+            location.reload();
         });
         roll0.addEventListener("click", function () {
             throwDice();
+            gun.play();
         })
         roll1.addEventListener("click", function () {
             throwDice();
+            gun.play();
         })
         pass0.addEventListener('click', function () {
             //switches players 
@@ -71,7 +79,7 @@
             showCurrentScore();
         } else if (gameData.roll1 == 1 || gameData.roll2 == 1) {
             switchPlayers();
-            gameInfo.innerHTML += `<p>Sorry, one of your rolls was a one. Switching to ${gameData.players[gameData.index]}</p>`;
+            gameInfo.innerHTML = `<p>Sorry, one of your rolls was a one. Switching to ${gameData.players[gameData.index]}</p>`;
         } else {
             //this is for the current player so make sure to make it the enemy; make a variable 
             gameInfo.innerHTML = `<p>You did ${rollSum} damage</p>`;
@@ -118,6 +126,8 @@
         if (gameData.score[gameData.enemy] <= 0) {
             gameInfo.innerHTML = `<h1>${gameData.players[gameData.index]} wins</h1>`
             document.getElementById('quit').innerHTML = "Start a New Game";
+            document.getElementById('quit').style.width = "auto";
+            document.getElementById('help').remove();
         }
     }
     
