@@ -12,14 +12,11 @@ body {
     font-family: 'Oswald', sans-serif;
 }
 
-#player1, #player2 {
-    width: 600px;
-}
-
 h1 {
     font-size: 4em;
     color: #EAEEB3;
     font-weight: 700;
+    /* padding-top: 0; */
 }
 
 #rules {
@@ -62,7 +59,7 @@ p {
     border: none;
 }
 
-.button2:hover {
+.button2h:hover {
     background-color: rgb(224, 229, 229, 0.75);
 
 }
@@ -72,24 +69,73 @@ p {
     background-color: transparent;
 }
 
-.button3:hover {
+.button3h:hover {
     background-color: rgb(224, 229, 229, 0.25);;
 }
 
+#quit {
+    font-size: 1.25em;
+    width: 100px;
+}
 
-/* .disabled {
+.actionButtons {
+    display: flex;
+}
+
+.disabled {
     opacity: 0.5;
-} */
+}
 
 #rules {
     text-align: center;
 }
 
-#gamecontrol, #score {
+#topbar, #score0, #score1 {
     display: none;
+    margin: auto;
+    background-repeat: no-repeat;
+}
+
+#topbar {
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+}
+
+#score0, #score1 {
+    width: 600px;
+}
+
+#score0 {
+    background-image: url("images/p1healthbar.png");
+    background-position: left center;
+}
+
+#score1 {
+    background-image: url("images/p2healthbar.png");
+    display: flex;
+    direction: rtl;
+    background-position: right center;
+    /* justify-content: flex-end; */
+}
+
+#score0 h1 {
+    padding-left: 50px;
+    padding-bottom: 20px;
+}
+
+#score1 h1 {
+    padding-right: 50px;
+    padding-bottom: 20px;
 }
 
 #display {
     display: flex;
 }
 
+#player1, #player2 {
+    width: 600px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}

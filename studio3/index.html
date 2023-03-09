@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <link href="styles.css" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
@@ -24,44 +25,32 @@
             eyes), your current score gets zeroed out. So don’t do that.</p>
         <button id="startgame" class="button1">Start the Game</button>
     </section>
-    <div id="gamecontrol">
+    <div id="topbar">
         <img src="images/topbar.png" alt="top bar" width="1200">
-        <div id="display">
-            <section id="player1" class="disabled">
-                <h1>PLAYER 1</h1>
-                <img src="images/jett.png" alt="jett" width="300">
-                <div id="score1"></div>
-                <!-- <div>
-                <button type="button">ROLL</button>
-                <button type="button">PASS</button>
+        <div id="gameInfo"></div>
+        <button id="quit" class="button3">Quit</button>
+    </div>
+    <div id="display">
+        <section id="player1">
+            <h1>JETT</h1>
+            <img src="images/jett.png" alt="jett" width="300">
+            <div id="score0"></div>
+            <div class="actionButtons">
+                <button id="roll0" class="button2">ROLL</button>
+                <button id="pass0" class="button3">PASS</button>
             </div>
-            <div id="score1"></div> -->
-            </section>
-            <section id="player2" class="disabled">
-                <h1>PLAYER 2</h1>
-                <img src="images/jett.png" alt="jett" width="300">
-                <div id="score2"></div>
-                <!-- <h1>100</h1>
-            <img src="images/p2healthbar.png">
-            <div>
-                <button type="button">ROLL</button>
-                <button type="button">PASS</button>
-            </div> -->
-            </section>
-        </div>
+        </section>
+        <section id="player2">
+            <h1>SAGE</h1>
+            <img src="images/sage.png" alt="sage" width="300">
+            <div id="score1"></div>
+            <div class="actionButtons">
+                <button id="roll1" class="button2">ROLL</button>
+                <button id="pass1" class="button3">PASS</button>
+            </div>
+        </section>
     </div>
-    <div id="score">
-        <img src="images/p1healthbar.png">
-    </div>
-    <div id="game">
-    </div>
-    <div id="actions"></div>
-
-    <script>
-
-
-    </script>
-
+    <div id="gameInfo"></div>
 </body>
 
 </html>
