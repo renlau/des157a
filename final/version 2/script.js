@@ -5,6 +5,7 @@
 
     const startGame = document.getElementById('startgame');
     const topbar = document.getElementById('topbar');
+    const display = document.getElementById('display');
     const gameInfo = document.getElementById('gameInfo');
     const player1 = document.getElementById('player1');
     const player2 = document.getElementById('player2');
@@ -15,10 +16,13 @@
     const score0 = document.getElementById('score0');
     const score1 = document.getElementById('score1');
     const rules = document.getElementById('rules');
-    const gun = new Audio('./audio/voicy-valorant-weapon-phantom.mp3');
+    const gun = new Audio('./audio/shoot.mp3');
+    const heal = new Audio('./audio/heal.mp3');
+    const win = new Audio('./audio/win.mp3');
+    const reload = new Audio('./audio/reload.mp3');
 
     const gameData = {
-        players: ['player 1', 'player 2'],
+        players: ['JETT', 'SAGE'],
         score: [99, 99],
         shield: [0,0],
         roll1: 0,
@@ -39,26 +43,34 @@
         document.getElementById('quit').addEventListener('click', function () {
             // reloads the page
             location.reload();
-            rules.style.display = "block";
         });
         document.getElementById('help').addEventListener('click', function () {
             // reloads the page
-            location.reload();
+            rules.style.display = "block";
+            topbar.style.display = "none";
+            display.style.display = "none";
+            document.getElementById('startgame').remove();
+            rules.innerHTML += `<button id="close" class="button1">Return to Game</button>`;
         });
+        // document.getElementById('close').addEventListener('click', function () {
+        //     rules.style.display = "none";
+        //     topbar.style.display = "block";
+        //     display.style.display = "block";
+        // });
         roll0.addEventListener("click", function () {
             throwDice();
-            gun.play();
         })
         roll1.addEventListener("click", function () {
             throwDice();
-            gun.play();
         })
         pass0.addEventListener('click', function () {
+            gameInfo.innerHTML = `<p>You equipped <span>25 light shield.</span> Switching to ${gameData.players[gameData.index]}</p>`;
             gameData.shield[0] = gameData.shield[0] + 25;
             showCurrentScore();
             switchPlayers();
         });
         pass1.addEventListener('click', function () { 
+            gameInfo.innerHTML = `<p>You equipped <span>25 light shield</span> Switching to ${gameData.players[gameData.index]}</p>`;
             gameData.shield[1] = gameData.shield[1] + 25;
             showCurrentScore();
             switchPlayers();
@@ -76,18 +88,20 @@
         }
         
         if (gameData.roll1 == 1 && gameData.roll2 == 1) {
-            gameInfo.innerHTML = `<p>You're enemy healed full health</p>`;
+            gameInfo.innerHTML = `<p>You're enemy <span>healed full health</span></p>`;
             gameData.score[gameData.enemy] = 99;
             switchPlayers();
             showCurrentScore();
+            heal.play();
         } else if (gameData.roll1 == 1 || gameData.roll2 == 1) {
             switchPlayers();
-            gameInfo.innerHTML = `<p>Sorry, one of your rolls was a one. Switching to ${gameData.players[gameData.index]}</p>`;
+            gameInfo.innerHTML = `<p>Sorry, one of your rolls was a one. <span>Switching to ${gameData.players[gameData.index]}</span></p>`;
+            reload.play();
         } else {
             if (gameData.critChance == 2) {
-                gameInfo.innerHTML = `<p>You got a headshot and did double the damage. You did ${rollSum} damage</p>`;
+                gameInfo.innerHTML = `<p>You got a headshot and did double the damage. You did <span>${rollSum} damage</span></p>`;
             } else {
-                gameInfo.innerHTML = `<p>You did ${rollSum} damage</p>`;
+                gameInfo.innerHTML = `<p>You did <span>${rollSum} damage</span></p>`;
             }
             
             if (gameData.shield[gameData.enemy] == 0) {
@@ -101,6 +115,7 @@
             }
             checkWinningCondition();
             showCurrentScore();
+            gun.play();
         }
     };
 
@@ -154,6 +169,7 @@
             pass1.setAttribute("disabled", "");
             pass1.classList.remove("button3h");
             pass1.classList.add("disabled");
+            win.play();
         }
     }
     
