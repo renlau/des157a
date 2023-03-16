@@ -1,0 +1,161 @@
+body {
+    background-image: url("images/background.png");
+    height: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+    color: #EAEEB3;
+    font-weight: 700;
+}
+
+#rules {
+    text-align: center;
+}
+
+p, .button1, .button2, .button3 {
+    font-size: 2em;
+    color: #E0E5E5;
+}
+
+p {
+    line-height: 1.5em;
+    text-align: left;
+}
+
+/* button styles */
+
+.button1, .button2, .button3 {
+    padding: 0.5em 1em;
+    transition-duration: 0.2s;
+}
+
+.button2, .button3 {
+    width: 200px;
+}
+
+.button1 {
+    background-color: rgb(127, 196, 192, 0.75);
+    border:0.5px solid #E0E5E5;
+}
+
+.button1:hover {
+    background-color: rgb(127, 196, 192);
+}
+
+.button2 {
+    background-color: rgb(224, 229, 229, 0.5);
+    border: none;
+}
+
+.button2h:hover {
+    background-color: rgb(224, 229, 229, 0.75);
+
+}
+
+.button3 {
+    border:0.5px solid #E0E5E5;
+    background-color: transparent;
+}
+
+.button3h:hover {
+    background-color: rgb(224, 229, 229, 0.25);;
+}
+
+#quit, #help {
+    font-size: 1.25em;
+    width: 100px;
+    margin: 10px;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 50px;
+    /* justify-content: space-between; */
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+#rules {
+    text-align: center;
+}
+
+#topbar, #score0, #score1 {
+    display: none;
+    margin: auto;
+    background-repeat: no-repeat;
+}
+
+#topbar {
+    padding-top: 20px;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+}
+
+#score0, #score1 {
+    width: 600px;
+}
+
+#score0 {
+    background-image: url("images/p1healthbar.png");
+    background-position: left center;
+    display: flex;
+    align-items: center;
+}
+
+#score1 {
+    background-image: url("images/p2healthbar.png");
+    display: flex;
+    direction: rtl;
+    background-position: right center;
+    align-items: center;
+}
+
+#score0 p, #score1 p {
+    background-image: url("images/shield.png");
+    background-repeat: no-repeat;
+    background-position: center center ;
+    text-align: center;
+    width: 50px;
+    padding: 5px 0;
+    margin-bottom: 3rem;
+}
+
+
+#score0 h1 {
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+#score1 h1 {
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+#display {
+    display: flex;
+}
+
+#player1, #player2 {
+    width: 600px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameInfo {
+    width: 300px;
+    /* text-align: center; */
+}
