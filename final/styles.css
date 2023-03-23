@@ -30,6 +30,7 @@ ul {
 
 }
 
+
 li {
     padding-bottom: 1em;
 }
@@ -66,7 +67,7 @@ h3 {
     text-decoration: none;
 }
 
-p {
+p, ol {
     font-family: 'Open Sans', sans-serif;
     color: #575757;
     line-height: 1.5em;
