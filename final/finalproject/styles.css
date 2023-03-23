@@ -1,0 +1,228 @@
+body {
+    height: 100%;
+    margin: 0;
+    position: relative;
+    width: 1200px;
+    margin: auto;
+    font-family: 'Oswald', sans-serif;
+}
+
+body,
+#helpcontent {
+    background-image: url("images/background.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+h1 {
+    font-size: 4em;
+    color: #EAEEB3;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2.5em;
+    color: #E0E5E5;
+    text-align: left;
+}
+
+#rules {
+    text-align: center;
+    width: 950px;
+    margin: auto;
+}
+
+p,
+.button1,
+.button2,
+.button3,
+ul {
+    font-size: 2em;
+    color: #E0E5E5;
+}
+
+p,
+ul {
+    line-height: 1.5em;
+    text-align: left;
+}
+
+/* button styles */
+
+.button1,
+.button2,
+.button3 {
+    padding: 0.5em 1em;
+    transition-duration: 0.2s;
+}
+
+.button2,
+.button3 {
+    width: 200px;
+}
+
+.button1:hover,
+.button2h:hover,
+.button3h:hover {
+    cursor: pointer;
+}
+
+.button1 {
+    background-color: rgb(127, 196, 192, 0.75);
+    border: 0.5px solid #E0E5E5;
+}
+
+.button1:hover {
+    background-color: rgb(127, 196, 192);
+}
+
+.button2 {
+    background-color: rgb(224, 229, 229, 0.5);
+    border: none;
+}
+
+.button2h:hover {
+    background-color: rgb(224, 229, 229, 0.75);
+
+}
+
+.button3 {
+    border: 0.5px solid #E0E5E5;
+    background-color: transparent;
+}
+
+.button3h:hover {
+    background-color: rgb(224, 229, 229, 0.25);
+    ;
+}
+
+#quit,
+#help {
+    font-size: 1.25em;
+    width: 100px;
+    margin: 10px;
+}
+
+#helpmodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#helpcontent {
+    margin: 2% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%;
+    /* Could be more or less, depending on screen size */
+    text-align: center;
+}
+
+.actionButtons {
+    display: flex;
+    gap: 50px;
+    /* justify-content: space-between; */
+}
+
+.disabled {
+    opacity: 0.3;
+    filter: grayscale(100%);
+}
+
+#rules {
+    text-align: center;
+}
+
+#topbar,
+#score0,
+#score1 {
+    display: none;
+    margin: auto;
+    background-repeat: no-repeat;
+}
+
+#topbar {
+    padding-top: 20px;
+    position: absolute;
+    flex-direction: column;
+    align-items: center;
+}
+
+#score0,
+#score1 {
+    width: 600px;
+}
+
+#score0 {
+    background-image: url("images/p1healthbar.png");
+    background-position: left center;
+    display: flex;
+    align-items: center;
+}
+
+#score1 {
+    background-image: url("images/p2healthbar.png");
+    display: flex;
+    direction: rtl;
+    background-position: right center;
+    align-items: center;
+}
+
+#score0 p,
+#score1 p {
+    background-image: url("images/shield.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    width: 50px;
+    padding: 5px 0;
+    margin-bottom: 3rem;
+}
+
+
+#score0 h1 {
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+
+#score1 h1 {
+    padding-right: 10px;
+    padding-bottom: 20px;
+}
+
+#display {
+    display: flex;
+}
+
+#player1,
+#player2 {
+    width: 600px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gameInfo {
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span {
+    color: #EAEEB3;
+}
+
+.gloweffect {
+    filter: drop-shadow(0px 0px 20px rgba(234, 238, 179, 0.5));
+}
